@@ -12,7 +12,6 @@ end
   
 group :test do
   gem 'selenium-webdriver'
-  gem 'nokogiri'
   gem 'capybara'
 end
 
