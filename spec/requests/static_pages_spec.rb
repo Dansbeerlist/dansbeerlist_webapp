@@ -11,9 +11,13 @@ require 'rails_helper'
 
       it "should have the title 'home'" do
         visit 'static_pages/home'
-        expect(page).to have_title("dansbeerlist | home")
+        expect(page).to have_title("dansbeerlist")
       end
 
+      it "should have a custom page title" do
+        visit 'static_pages/home'
+        expect(page).not_to have_title('| home')
+      end
     end
 
     describe "Help page" do
